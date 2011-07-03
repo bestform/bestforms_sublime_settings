@@ -1,0 +1,6 @@
+[submodule "submodules/RyanOnRails"]
+	path = submodules/RyanOnRails
+	url = https://github.com/WhatWeDo/ryan-on-rails.sublime-text.git
+[submodule "submodules/adzenithPlugins"]
+	path = submodules/adzenithPlugins
+	url = https://github.com/adzenith/Sublime-plugins.git
