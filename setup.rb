@@ -1,24 +1,31 @@
-userRessources = [
+USERRESSOURCES = [
   "submodules/adzenithPlugins/scroll_offset.py"
 ]
 
-packages = [
+PACKAGES = [
   "submodules/RyanOnRails/Ryan On Rails"
 ]
+
+TARGETPACKAGE = "../bestform"
 
 def isWindows?
   ENV['OS'] == "Windows_NT"  
 end
 
-userRessources.each do |r|
-  target = File.basename r
-  if File.exists? target
-    File.unlink target
-  end
-  File.symlink r, target
+
+
+if Dir.exists? TARGETPACKAGE
+  Dir.rmdir TARGETPACKAGE
 end
 
-packages.each do |p|
+Dir.mkdir TARGETPACKAGE
+
+USERRESSOURCES.each do |r|
+  target = File.join TARGETPACKAGE, (File.basename r)
+  File.symlink "../User/" + r, target
+end
+
+PACKAGES.each do |p|
   target = "../" + (File.basename p)
   if File.exists? target
     File.unlink target
