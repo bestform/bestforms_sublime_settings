@@ -1,0 +1,11 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+
+  // scroll offset plugin
+  "scroll_offset_vertical" : 8,
+  "scroll_offset_horizontal" : 20,
+
+  // sane tabs
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true
+}
