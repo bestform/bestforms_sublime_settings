@@ -14,8 +14,7 @@ def isWindows?
 end
 
 def removeDir(directory)
-  entries = Dir.entries(directory).reverse
-  2.times {entries.pop}
+  entries = Dir.entries(directory).reject{|f| [".", ".."].include? f}
   entries.each do |e|
     entry = File.join directory, e
     if !File.directory? entry
